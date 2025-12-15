@@ -8,6 +8,40 @@ soong_namespace {
 }
 
 android_app_import {
+	name: "CACertService",
+	owner: "sony",
+	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "CneApp",
+	owner: "sony",
+	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
+	required: ["CneApp.libvndfwk_detect_jni.qti_symlink"],
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "IWlanService",
+	owner: "sony",
+	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "sony",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -79,25 +113,25 @@ android_app_import {
 dex_import {
 	name: "com.fingerprints.extension",
 	owner: "sony",
-	jars: ["proprietary/framework/com.fingerprints.extension.jar"],
+	jars: ["proprietary/system/framework/com.fingerprints.extension.jar"],
 }
 
 dex_import {
 	name: "com.qti.snapdragon.sdk.display",
 	owner: "sony",
-	jars: ["proprietary/framework/com.qti.snapdragon.sdk.display.jar"],
+	jars: ["proprietary/system/framework/com.qti.snapdragon.sdk.display.jar"],
 }
 
 dex_import {
 	name: "com.sonymobile.miscta_impl",
 	owner: "sony",
-	jars: ["proprietary/framework/com.sonymobile.miscta_impl.jar"],
+	jars: ["proprietary/system/framework/com.sonymobile.miscta_impl.jar"],
 }
 
 dex_import {
 	name: "tcmclient",
 	owner: "sony",
-	jars: ["proprietary/framework/tcmclient.jar"],
+	jars: ["proprietary/system/framework/tcmclient.jar"],
 }
 
 dex_import {
@@ -434,40 +468,6 @@ install_symlink {
 	system_ext_specific: true,
 	installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
 	symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
-}
-
-android_app_import {
-	name: "CACertService",
-	owner: "sony",
-	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "CneApp",
-	owner: "sony",
-	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
-	required: ["CneApp.libvndfwk_detect_jni.qti_symlink"],
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "IWlanService",
-	owner: "sony",
-	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
 }
 
 install_symlink {
