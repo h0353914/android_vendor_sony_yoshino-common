@@ -9,10 +9,12 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/sony/yoshino-common/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
     vendor/sony/yoshino-common/proprietary/vendor/bin/ffu:$(TARGET_COPY_OUT_VENDOR)/bin/ffu \
+    vendor/sony/yoshino-common/proprietary/system/bin/cacaoserver:$(TARGET_COPY_OUT_SYSTEM)/bin/cacaoserver \
     vendor/sony/yoshino-common/proprietary/system/bin/mssconfig:$(TARGET_COPY_OUT_SYSTEM)/bin/mssconfig \
     vendor/sony/yoshino-common/proprietary/system/bin/sony-modem-switcher:$(TARGET_COPY_OUT_SYSTEM)/bin/sony-modem-switcher \
     vendor/sony/yoshino-common/proprietary/system/bin/taimport:$(TARGET_COPY_OUT_SYSTEM)/bin/taimport \
     vendor/sony/yoshino-common/proprietary/system/etc/audio_policy.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy.conf \
+    vendor/sony/yoshino-common/proprietary/system/etc/default-permissions/com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/com.sonyericsson.android.camera.xml \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/cmnlib.b00:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/cmnlib.b00 \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/cmnlib.b02:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/cmnlib.b02 \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/cmnlib.b03:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/cmnlib.b03 \
@@ -60,12 +62,22 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/tztpm.b05:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/tztpm.b05 \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/tztpm.b06:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/tztpm.b06 \
     vendor/sony/yoshino-common/proprietary/system/etc/firmware/tztpm.b07:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/tztpm.b07 \
+    vendor/sony/yoshino-common/proprietary/system/etc/init/cacaoserver.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/cacaoserver.rc \
     vendor/sony/yoshino-common/proprietary/system/etc/init/mssconfig.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/mssconfig.rc \
     vendor/sony/yoshino-common/proprietary/system/etc/init/taimport.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/taimport.rc \
     vendor/sony/yoshino-common/proprietary/system/etc/init/updatemiscta.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/updatemiscta.rc \
     vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.fingerprints.extension.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.fingerprints.extension.xml \
     vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.snapdragon.sdk.display.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.sonymobile.album.internal.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.album.internal.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.sonymobile.album.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.album.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.sonymobile.camera.addon.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.camera.addon.api.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.sonymobile.imageprocessor.bypasscamera.api.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.imageprocessor.bypasscamera.api.xml \
     vendor/sony/yoshino-common/proprietary/system/etc/permissions/com.sonymobile.miscta.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.miscta.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/privapp-permissions-com.sonyericsson.android.addoncamera.artfilter.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonyericsson.android.addoncamera.artfilter.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonyericsson.android.camera.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/privapp-permissions-com.sonyericsson.android.camera3d.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonyericsson.android.camera3d.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/privapp-permissions-com.sonymobile.android.addoncamera.soundphoto.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonymobile.android.addoncamera.soundphoto.xml \
+    vendor/sony/yoshino-common/proprietary/system/etc/permissions/privapp-permissions-com.sonymobile.moviecreator.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sonymobile.moviecreator.xml \
     vendor/sony/yoshino-common/proprietary/system/etc/public.libraries-sony.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-sony.txt \
     vendor/sony/yoshino-common/proprietary/system/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/sony/yoshino-common/proprietary/system/lib/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.bluetooth_audio@1.0.so \
@@ -78,10 +90,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/system/lib/libOpenCL_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libOpenCL_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libQTEEConnector_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libQTEEConnector_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libadsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libadsprpc_system.so \
-    vendor/sony/yoshino-common/proprietary/system/lib/libcacao_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_client.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libcacao_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_pal.so \
-    vendor/sony/yoshino-common/proprietary/system/lib/libcacao_process_ctrl_gateway.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_process_ctrl_gateway.so \
-    vendor/sony/yoshino-common/proprietary/system/lib/libcacao_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_service.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libcdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcdsprpc_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libjni_imageutil.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libjni_imageutil.so \
     vendor/sony/yoshino-common/proprietary/system/lib/libjni_snapcammosaic.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libjni_snapcammosaic.so \
@@ -114,6 +123,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/system/lib64/libOpenCL_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libOpenCL_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib64/libQTEEConnector_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libQTEEConnector_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib64/libadsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libadsprpc_system.so \
+    vendor/sony/yoshino-common/proprietary/system/lib64/libcacao_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcacao_pal.so \
     vendor/sony/yoshino-common/proprietary/system/lib64/libcdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcdsprpc_system.so \
     vendor/sony/yoshino-common/proprietary/system/lib64/libdevice_security_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdevice_security_client.so \
     vendor/sony/yoshino-common/proprietary/system/lib64/libmdsprpc_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmdsprpc_system.so \
@@ -583,9 +593,11 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libbccQTI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbccQTI.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdisp-aba.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libdrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrc.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libdualcameraddm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdualcameraddm.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcrc.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvadsp_stub.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
@@ -600,8 +612,20 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_algo.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmulawdec.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/liboptizoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboptizoom.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveBlobDescriptor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveBlobDescriptor.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveBlobDescriptor_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveBlobDescriptor_stub.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveCommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveCommon.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveCommon_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveCommon_stub.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveFaceLandmarks.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveFaceLandmarks.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveFaceRecognition.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveFaceRecognition.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveObjectSegmentation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectSegmentation.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveObjectTracker.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscveObjectTracker_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker_stub.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscvePanorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscvePanorama.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libscvePanorama_lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscvePanorama_lite.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsomc_alfort.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsomc_alfort.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsomc_alfortlp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsomc_alfortlp.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsomc_alfortlpserv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsomc_alfortlpserv.so \
@@ -642,6 +666,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsony_fooddetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsony_fooddetect.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsony_naruto.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsony_naruto.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libsurround_3mic_proc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsurround_3mic_proc.so \
+    vendor/sony/yoshino-common/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpphvx.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/sony/yoshino-common/proprietary/vendor/lib/libznr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libznr.so \
@@ -924,6 +949,16 @@ PRODUCT_COPY_FILES += \
     vendor/sony/yoshino-common/proprietary/vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    CameraAddonPermission-release \
+    CameraCommonPermission-release \
+    CameraExtensionPermission-release \
+    ImageProcessorPermission-release \
+    ArtFilterCamera-xhdpi-release \
+    CameraCommon \
+    CameraPanorama-release \
+    SemcCameraUI-xxhdpi-release \
+    SomcMovieCreator-release \
+    SoundPhotoCamera-xhdpi-release \
     CACertService \
     CneApp \
     IWlanService \
@@ -935,6 +970,8 @@ PRODUCT_PACKAGES += \
     qcrilmsgtunnel \
     com.fingerprints.extension \
     com.qti.snapdragon.sdk.display \
+    com.sonymobile.camera.addon.api \
+    com.sonymobile.imageprocessor.bypasscamera.api \
     com.sonymobile.miscta_impl \
     tcmclient \
     com.qti.dpmframework \

@@ -8,6 +8,112 @@ soong_namespace {
 }
 
 android_app_import {
+	name: "CameraAddonPermission-release",
+	owner: "sony",
+	apk: "proprietary/system/app/CameraAddonPermission-release/CameraAddonPermission-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "CameraCommonPermission-release",
+	owner: "sony",
+	apk: "proprietary/system/app/CameraCommonPermission-release/CameraCommonPermission-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "CameraExtensionPermission-release",
+	owner: "sony",
+	apk: "proprietary/system/app/CameraExtensionPermission-release/CameraExtensionPermission-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "ImageProcessorPermission-release",
+	owner: "sony",
+	apk: "proprietary/system/app/ImageProcessorPermission-release/ImageProcessorPermission-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "ArtFilterCamera-xhdpi-release",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/ArtFilterCamera-xhdpi-release/ArtFilterCamera-xhdpi-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "CameraCommon",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/CameraCommon/CameraCommon.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "CameraPanorama-release",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/CameraPanorama-release/CameraPanorama-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "SemcCameraUI-xxhdpi-release",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/SemcCameraUI-xxhdpi-release/SemcCameraUI-xxhdpi-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "SomcMovieCreator-release",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/SomcMovieCreator-release/SomcMovieCreator-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "SoundPhotoCamera-xhdpi-release",
+	owner: "sony",
+	apk: "proprietary/system/priv-app/SoundPhotoCamera-xhdpi-release/SoundPhotoCamera-xhdpi-release.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "CACertService",
 	owner: "sony",
 	apk: "proprietary/vendor/app/CACertService/CACertService.apk",
@@ -120,6 +226,18 @@ dex_import {
 	name: "com.qti.snapdragon.sdk.display",
 	owner: "sony",
 	jars: ["proprietary/system/framework/com.qti.snapdragon.sdk.display.jar"],
+}
+
+dex_import {
+	name: "com.sonymobile.camera.addon.api",
+	owner: "sony",
+	jars: ["proprietary/system/framework/com.sonymobile.camera.addon.api.jar"],
+}
+
+dex_import {
+	name: "com.sonymobile.imageprocessor.bypasscamera.api",
+	owner: "sony",
+	jars: ["proprietary/system/framework/com.sonymobile.imageprocessor.bypasscamera.api.jar"],
 }
 
 dex_import {
