@@ -1,8 +1,8 @@
 <exceptions>
   <exception package="com.sonyericsson.android.camera">
-    <permission name="android.permission.CAMERA"/>
-    <permission name="android.permission.RECORD_AUDIO"/>
-    <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission name="android.permission.CAMERA" fixed="false"/>
+    <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+    <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false"/>
+    <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false"/>
   </exception>
 </exceptions>
-
